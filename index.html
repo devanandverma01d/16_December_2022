@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment -Createing a news word by word uding HTML form in JS</title>
+    <style>
+        /* 
+        Here we can write CSS code
+        */
+        form#box {
+            width: 600px;
+            height: 450px;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 100px auto;
+        }
+    </style>
+    <script src="./js/script.js"></script>
+    <script>
+        /*
+        here we can write JS code
+        */
+    </script>
+</head>
+
+<body>
+    <form action="" name="f1" id="box"> <!-- this is an HTML form for creating news -->
+
+        <h1>Createing a news using HTML form in JS</h1>
+        <label for="">News:</label><br>
+        <input type="text" name="nm"><br><br>
+        <input type="submit" onclick="display(event)">
+        <input type="button" value="Submit">
+        <p id="news"></p>
+    </form>
+
+
+
+    <script src="./js/script.js"></script>
+    <script>
+        //Global Variable--> The Variables which are defined outside function is called as global variable
+        var a = document.querySelector('input[type="text"]')// This is Global Variable
+        var b = document.getElementById('news');// This is Global variable
+
+
+        function display(e) {  // This is functiion calling
+            // this is function body
+            //object.method/function
+            e.preventDefault();
+            //alert("hello");
+            b.innerHTML += a.value + " ";
+
+            //var z = document.f1.nm.value;
+            //document.getElementById('news').innerHTML += z + " ";
+
+            // console.log(a.value + " ");
+        }
+    </script>
+</body>
+
+</html>
